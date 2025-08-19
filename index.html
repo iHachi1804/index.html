@@ -26,6 +26,12 @@
       text-align: center;
       white-space: nowrap;
       margin-bottom: 20px;
+       }
+    h1 {
+      font-size: clamp(28px, 8vw, 96px);
+      text-align: center;
+      white-space: nowrap;
+      margin-bottom: 20px;
     }
     a {
       color: inherit;
@@ -33,15 +39,19 @@
       border-bottom: 2px solid currentColor;
       padding-bottom: 4px;
     }
-    .boton {
-      position: fixed; /* Cambiado de absolute a fixed */
+    /* Contenedor de botones */
+    .botones {
+      position: fixed;
       bottom: 20px;
       left: 20px;
+      display: flex;
+      gap: 12px; /* espacio entre los botones */
+    }
+    .boton {
       padding: 12px 24px;
       font-size: 1.2rem;
       font-weight: bold;
       color: #fff;
-      background: linear-gradient(45deg, #69C9D0, #EE1D52); /* colores TikTok */
       border: none;
       border-radius: 12px;
       cursor: pointer;
@@ -53,6 +63,13 @@
       transform: scale(1.1);
       box-shadow: 4px 4px 12px rgba(0,0,0,0.6);
     }
+    /* Colores específicos */
+    .tiktok {
+      background: linear-gradient(45deg, #69C9D0, #EE1D52);
+    }
+    .youtube {
+      background: linear-gradient(45deg, #FF0000, #CC0000);
+    }
   </style>
 </head>
 <body>
@@ -62,9 +79,14 @@
     </a>
   </h1>
 
-  <!-- Botón TikTok abajo a la izquierda -->
-  <a href="https://www.tiktok.com/@omited28" target="_blank" rel="noopener" class="boton">
-    TikTok
-  </a>
+  <!-- Contenedor de botones -->
+  <div class="botones">
+    <a href="https://www.tiktok.com/@omited28" target="_blank" rel="noopener" class="boton tiktok">
+      TikTok
+    </a>
+    <a href="https://www.youtube.com/@omited2869" target="_blank" rel="noopener" class="boton youtube">
+      YouTube
+    </a>
+  </div>
 </body>
 </html>
