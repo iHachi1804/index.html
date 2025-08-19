@@ -19,7 +19,7 @@
       color: #e2e8f0;
       font-family: sans-serif;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-      position: relative; /* necesario para posicionar el botón */
+      position: relative;
     }
     h1 {
       font-size: clamp(28px, 8vw, 96px);
@@ -34,7 +34,7 @@
       padding-bottom: 4px;
     }
     .boton {
-      position: absolute;
+      position: fixed; /* Cambiado de absolute a fixed */
       bottom: 20px;
       left: 20px;
       padding: 12px 24px;
